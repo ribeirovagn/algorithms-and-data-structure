@@ -2,7 +2,7 @@
 
 namespace App\AVLTree;
 
-use App\AVLTRee\Node;
+use App\AVLTree\Node;
 
 class BinaryTree
 {

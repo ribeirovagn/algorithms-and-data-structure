@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\AVLTRee;
+namespace App\AVLTree;
 
 use App\AVLTree\Node;
 

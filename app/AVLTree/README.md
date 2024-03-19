@@ -33,3 +33,6 @@ Cada nó em uma Árvore AVL possui os seguintes campos:
 ### Conclusão:
 
 A Árvore AVL é uma estrutura de dados eficiente para armazenamento e recuperação de dados, especialmente quando a eficiência da busca é uma prioridade e o conjunto de dados está sujeito a inserções e remoções frequentes. No entanto, sua implementação e manutenção exigem cuidado devido à complexidade associada ao balanceamento da árvore.
+
+## Autor
+[Vagner Ribeiro](https://www.linkedin.com/in/vagner-ribeiro)

@@ -27,3 +27,6 @@ Principais estruturas de dados:
 Algoritmos e Estruturas de Dados estão intimamente relacionados. O desempenho de um algoritmo muitas vezes depende da escolha adequada da estrutura de dados para representar os dados envolvidos. Por exemplo, um algoritmo de busca pode ser mais eficiente se os dados estiverem organizados em uma árvore de busca binária em vez de uma lista simples.
 
 Em resumo, os algoritmos fornecem os meios para manipular e processar dados, enquanto as estruturas de dados fornecem os meios para armazenar e organizar esses dados de maneira eficiente. O estudo desses conceitos é essencial para qualquer programador ou desenvolvedor de software que busque escrever código eficiente e escalável.
+
+## Autor
+[Vagner Ribeiro](https://www.linkedin.com/in/vagner-ribeiro)

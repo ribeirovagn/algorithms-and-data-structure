@@ -1,4 +1,4 @@
-## Algoritmos e Estrutura de dados
+# Algoritmos e Estrutura de dados
 
 São fundamentais para a área da ciência da computação e para o desenvolvimento de software eficiente e escalável. Segue uma breve explicação sobre cada um:
 
@@ -27,6 +27,22 @@ Principais estruturas de dados:
 Algoritmos e Estruturas de Dados estão intimamente relacionados. O desempenho de um algoritmo muitas vezes depende da escolha adequada da estrutura de dados para representar os dados envolvidos. Por exemplo, um algoritmo de busca pode ser mais eficiente se os dados estiverem organizados em uma árvore de busca binária em vez de uma lista simples.
 
 Em resumo, os algoritmos fornecem os meios para manipular e processar dados, enquanto as estruturas de dados fornecem os meios para armazenar e organizar esses dados de maneira eficiente. O estudo desses conceitos é essencial para qualquer programador ou desenvolvedor de software que busque escrever código eficiente e escalável.
+
+## Pré-requisitos
+ * PHP
+ * Composer
+
+## Rodar a aplicação
+
+```bash
+composer install
+```
+
+```bash
+composer test
+```
+
+Exemplos de utilização estão em testes.
 
 ## Autor
 [Vagner Ribeiro](https://www.linkedin.com/in/vagner-ribeiro)

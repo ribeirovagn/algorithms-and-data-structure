@@ -42,17 +42,21 @@ class AVLTreeTest extends TestCase
     {
 
         $this->initTree();
-        $searchFirstValue = "4";
+        $searchFirstValue = 4;
         $search = $this->avlTree->search($this->root, $searchFirstValue);
         $this->assertSame($searchFirstValue, $search->value, "Deve retornar nó raiz");
 
-        $searchLeftValue = "2";
+        $searchLeftValue = 2;
         $searchLeft = $this->avlTree->search($this->root, $searchLeftValue);
         $this->assertSame($searchLeftValue, $searchLeft->value, "Deve encontrar um nó na esquerda");
 
-        $searchRightValue = "8";
+        $searchRightValue = 8;
         $searchRight = $this->avlTree->search($this->root, $searchRightValue);
         $this->assertSame($searchRightValue, $searchRight->value, "Deve encontrar um nó na direita");
+
+        $searchNullValue = 81;
+        $searchNull = $this->avlTree->search($this->root, $searchNullValue);
+        $this->assertNull($searchNull, "Não deve encontrar valores");
     }
 
     // Cenario 1
@@ -61,7 +65,7 @@ class AVLTreeTest extends TestCase
     {
         $this->initTree();
 
-        $scenario1 = "8";
+        $scenario1 = 8;
         $newNode = $this->avlTree->delete($this->root, $scenario1);
 
         // Caso o valor procurado não seja encontrado retorna NULL
@@ -78,7 +82,7 @@ class AVLTreeTest extends TestCase
     {
         $this->initTree();
 
-        $scenario1 = "7";
+        $scenario1 = 7;
         $newNode = $this->avlTree->delete($this->root, $scenario1);
 
         // Caso o valor procurado não seja encontrado retorna NULL
@@ -96,7 +100,7 @@ class AVLTreeTest extends TestCase
         $this->initTree();
         $this->root = $this->avlTree->insert($this->root, 0);
 
-        $scenario3 = "1";
+        $scenario3 = 1;
         $newNode = $this->avlTree->delete($this->root, $scenario3);
 
         // Caso o valor procurado não seja encontrado retorna NULL
@@ -114,7 +118,7 @@ class AVLTreeTest extends TestCase
         $this->initTree();
         $this->root = $this->avlTree->insert($this->root, 0);
 
-        $scenario3 = "6";
+        $scenario3 = 6;
         $newNode = $this->avlTree->delete($this->root, $scenario3);
 
         // Caso o valor procurado não seja encontrado retorna NULL

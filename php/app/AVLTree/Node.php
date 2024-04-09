@@ -4,7 +4,7 @@ namespace App\AVLTree;
 
 class Node
 {
-    public string $value;
+    public int $value;
     public Node | null $left;
     public Node | null $right;
     public int $height;

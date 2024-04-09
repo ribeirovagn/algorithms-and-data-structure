@@ -9,7 +9,7 @@ use App\AVLTree\Node;
 class AVLTree extends BinaryTree
 {
 
-    public function search(Node | null $node, string $value): Node | null
+    public function search(Node | null $node, int $value): Node | null
     {
         if (!$node instanceof Node) {
             return null;
@@ -26,10 +26,12 @@ class AVLTree extends BinaryTree
         if ($value > $node->value && $node instanceof Node) {
             return $this->search($node->right, $value);
         }
+
+        return null;
     }
 
 
-    public function insert(Node | null $root, $value): Node
+    public function insert(Node | null $root, int $value): Node
     {
         if (is_null($root)) {
             return new Node($value);
@@ -56,7 +58,7 @@ class AVLTree extends BinaryTree
         );
     }
 
-    public function delete(Node | null $root, $value)
+    public function delete(Node | null $root, $value): Node | null
     {
 
         if ($value === $root->value) {

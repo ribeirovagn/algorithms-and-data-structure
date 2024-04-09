@@ -2,7 +2,7 @@ import BinaryTree from "../src/tree/avlTree/BinaryTree";
 import Leaf from "../src/tree/avlTree/Leaf";
 
 
-test("Deve instanciar um novo Node", () => {
+test("Binary Tree", () => {
     console.clear()
 
     const binaryTree = new BinaryTree();

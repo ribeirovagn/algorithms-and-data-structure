@@ -1,5 +1,5 @@
-import AVLTree from "../src/tree/avlTree/AVLTree";
-import BinaryTree from "../src/tree/avlTree/BinaryTree";
+import AVLTree from "../src/tree/avl/AVLTree";
+import BinaryTree from "../src/tree/binary/BinaryTree";
 
 console.clear()
 

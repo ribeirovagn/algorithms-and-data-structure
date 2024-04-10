@@ -1,4 +1,4 @@
-import Leaf from "./Leaf";
+import Leaf from "../Leaf";
 
 export default class BinaryTree {
 

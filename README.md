@@ -28,21 +28,6 @@ Algoritmos e Estruturas de Dados estão intimamente relacionados. O desempenho d
 
 Em resumo, os algoritmos fornecem os meios para manipular e processar dados, enquanto as estruturas de dados fornecem os meios para armazenar e organizar esses dados de maneira eficiente. O estudo desses conceitos é essencial para qualquer programador ou desenvolvedor de software que busque escrever código eficiente e escalável.
 
-## Pré-requisitos
- * PHP
- * Composer
-
-## Rodar a aplicação
-
-```bash
-composer install
-```
-
-```bash
-composer test
-```
-
-Exemplos de utilização estão em testes.
 
 ## Autor
 [Vagner Ribeiro](https://www.linkedin.com/in/vagner-ribeiro)

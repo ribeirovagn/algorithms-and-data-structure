@@ -2,12 +2,10 @@ import Leaf from "../Leaf";
 
 export default class AVLTree {
 
-
     includes(leaf: Leaf | undefined, value: number): boolean {
         if (leaf === undefined) {
             return false;
         }
-
         const root = [leaf];
         while (root.length != 0) {
             const current = root.shift();
@@ -15,7 +13,6 @@ export default class AVLTree {
             if (current?.left) root.push(current.left);
             if (current?.right) root.push(current.right);
         }
-
         return false;
     }
 
@@ -29,7 +26,6 @@ export default class AVLTree {
                     Math.max(this.getHeight(newLeafLeft), this.getHeight(leaf.right) + 1)
                 ));
             }
-
             const newLeafRight = this.insert(leaf?.right, value);
             return this.rebalance(
                 this.rightReplace(
@@ -39,7 +35,6 @@ export default class AVLTree {
                 )
             );
         }
-
         return new Leaf(value);
     }
 
@@ -71,9 +66,7 @@ export default class AVLTree {
             } else if (value > leaf?.value!) {
                 leaf.right = this.delete(leaf?.right, value);
             }
-
             const balanceFactor = this.balanceFactor(leaf!);
-
             if (balanceFactor != -1 && balanceFactor != 0 && balanceFactor != 1) {
                 leaf = this.rebalance(leaf!);
             }
@@ -89,22 +82,17 @@ export default class AVLTree {
         const bf = this.balanceFactor(leaf);
         const fl = leaf.left ? this.balanceFactor(leaf.left) : 0;
         const fr = leaf.right ? this.balanceFactor(leaf.right) : 0;
-
         if (bf === 2) {
             if (fl === -1) {
                 leaf = this.leftReplace(leaf, this.leftRotate(leaf.left!));
                 return this.rightRotate(leaf);
-            }
-            if (fl === 1) {
+            } else if (fl === 1) {
                 return this.rightRotate(leaf);
             }
-        }
-
-        if (bf === -2) {
+        } else if (bf === -2) {
             if (fr === 1) {
                 leaf = this.rightReplace(leaf, this.rightRotate(leaf.right!));
-            }
-            if (fr === -1) {
+            } else if (fr === -1) {
                 return this.leftRotate(leaf);
             }
         }
@@ -116,9 +104,7 @@ export default class AVLTree {
         const left = leaf.left;
         const rl = leaf.right?.left;
         const rr = leaf.right?.right;
-
         const height = Math.max(this.getHeight(leaf), this.getHeight(rl)) + 1;
-        console.log(height)
         return new Leaf(
             Number(leaf.right?.value),
             Math.max(height, this.getHeight(rr)) + 1,
@@ -131,9 +117,7 @@ export default class AVLTree {
         const ll = leaf.left?.left;
         const lr = leaf.left?.right;
         const right = leaf.right?.right;
-
         const height = Math.max(this.getHeight(lr) + 1);
-        console.log(height);
         return new Leaf(
             Number(leaf.left?.value),
             Math.max(height, this.getHeight(ll) + 1),
